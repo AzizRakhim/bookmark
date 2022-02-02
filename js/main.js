@@ -1,3 +1,5 @@
+// FAQ START
+
 let elQuestionBtn = document.getElementById('questionBtn');
 let elQuestionBtnTwo = document.getElementById('questionBtnTwo');
 let elQuestionBtnThree = document.getElementById('questionBtnThree');
@@ -29,4 +31,24 @@ elQuestionBtnThree.addEventListener('click', function() {
 elQuestionBtnFour.addEventListener('click', function() {
     elModalBoxFour.classList.toggle('show');
     elUpDownFour.classList.toggle('degree');
+})
+
+// FAQ END
+// HEADER START
+
+let elOpenBtn = document.getElementById('openBtn');
+let elCloseBtn = document.getElementById('closeBtn');
+let elModalBtn = document.getElementById('modalBtn');
+
+elOpenBtn.addEventListener('click', function() {
+    elModalBtn.classList.add('show');
+    elOpenBtn.classList.add('hide');
+    elCloseBtn.classList.add('show-it');
+})
+
+
+elCloseBtn.addEventListener('click', function() {
+    elModalBtn.classList.remove('show');
+    elOpenBtn.classList.remove('hide');
+    elCloseBtn.classList.remove('show-it');
 })
