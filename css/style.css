@@ -6,6 +6,11 @@ body{
     font-family: 'Rubik', 'Arial', sans-serif;
 }
 
+.container{
+    width: 1150px;
+    padding: 0 25px;
+}
+
 .site-header{
     padding-top: 48px;
     position: relative;
@@ -51,11 +56,6 @@ body{
     color: #fa5959;
 }
 
-.container{
-    max-width: 1180px;
-    padding: 0 10px;
-}
-
 /* header end */
 /* hero-intro start */
 
@@ -67,7 +67,7 @@ body{
 }
 
 .hero-info{
-    width: 540px;
+    width: 50%;
 }
 
 .hero-title{
@@ -103,12 +103,11 @@ body{
 }
 
 .hero-img{
-    width: 565px;
-    position: relative;
-    left: 55px;
+    width: 50%;
 }
 
 .hero-img img{
+    width: 536px;
     border-radius: 25px;
 }
 
@@ -119,7 +118,7 @@ body{
     padding: 80px 0 89px;
     background-image: url('/images/features-background-img.svg');
     background-repeat: no-repeat;
-    background-position: bottom left -85px;
+    background-position: bottom left -100px;
 }
 
 .features-intro .text{
@@ -164,11 +163,16 @@ body{
 }
 
 .features-img{
-    margin-right: 124px;
+    width: 50%;
+}
+
+.features-img img{
+    width: 536px;
 }
 
 .features-desc{
-    width: 445px;
+    width: 50%;
+    padding-left: 50px;
 }
 
 .features-desc .text{
@@ -214,6 +218,7 @@ body{
     width: 100%;
     margin-bottom: 40px;
     list-style: none;
+    justify-content: center;
 }
 
 .download-box{
@@ -422,12 +427,6 @@ body{
     background-color: #5267df;
 }
 
-.email-intro{
-    width: 442px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 .joiners{
     display: block;
     font-weight: 500;
@@ -462,6 +461,10 @@ input[type="email"]{
 
 input[type="email"]:focus{
     outline: 2px solid #fa5959;
+}
+
+form {
+    text-align: center;
 }
 
 form .btn{
@@ -549,7 +552,9 @@ form .btn:hover{
     top: 3px;
 }
 
-@media screen and (max-width: 1200px) {
+/* MEDIA LARGE START */
+
+@media screen and (max-width: 992px) {
     
     /* HEADER START */
 
@@ -557,81 +562,6 @@ form .btn:hover{
     .container-download {
         width: 95%;
     }
-
-    .logo-box{
-        z-index: 3000;
-        color: #fff;
-    }
-
-    .site-nav{
-        position: fixed;
-        top: -100%;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        z-index: 200;
-        background-color: #000;
-        opacity: 0.9;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 0.4s ease all;
-        margin-top: 0;
-    }
-
-    .site-list{
-        display: flex;
-        flex-flow: column wrap;
-        margin-top: 0;
-    }
-
-    .site-item:not(:first-child){
-        margin-left: 0px;
-    }
-
-    .site-item{
-        margin-bottom: 30px;
-    }
-
-    .site-link{
-        color: #fff;
-        font-size: 20px;
-    }
-
-    .header-btn{
-        display: block;
-        position: relative;
-    }
-
-    .header-btn-close{
-        position: fixed;
-        top: 50px;
-        right: 50px;
-        color: #fff;
-        z-index: 200;
-        display: none;
-    }
-
-    .show{
-        top: 0;
-        color: #fff;
-    }
-
-    .show-it{
-        display: block;
-    }
-
-    .hide{
-        display: none;
-    }
-
-    .hero-img{
-        left: 0;
-    }
-
-    /* HEADER END */
-    /* HERO-INTRO START */
 
     .hero-entry{
         display: flex;
@@ -645,7 +575,7 @@ form .btn:hover{
     }
 
     .hero-img img{
-        width: 657px;
+        max-width: 587px;
     }
 
     .hero-intro{
@@ -661,30 +591,14 @@ form .btn:hover{
     /* HERO END */
     /* FEATURES START */
 
-    .features-list{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .features-item{
-        width: 100%;
-        text-align: center;
-        padding: 20px 0 20px;
-    }
-
-    .features-item:first-child{
-        border-top: 2px solid rgba(73, 93, 207, 0.20012);
-    }
-
     .features-img{
         width: 100%;
-        min-height: 650px;
         margin-right: 0;
+        text-align: center;
     }
 
     .features-img img{
-        min-height: 650px;
-        width: 100%;
+        max-width: 657px;
         object-fit: cover;
         border-radius: 16px;
     }
@@ -710,18 +624,12 @@ form .btn:hover{
     /* FEATURE END */
     /* DOWNLOADS-CARDS START */
 
+    .download-intro{
+        width: 100%;
+    }
+
     .download-cards{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .download-box{
-        width: 100%;
-        text-align: center;
-    }
-
-    .download-box-bottom .btn{
-        width: 100%;
+        justify-content: center;
     }
 
     .hidden{
@@ -729,63 +637,9 @@ form .btn:hover{
     }
 
     /* DOWNLOAD END */
-
-    /* QUESTIONS START */
-
-    .questions-intro{
-        width: 100%;
-        padding: 0 10px;
-        margin: 0 auto;
-    }
-
-    /* QUESTIONS END */
-
-    /* EMAIL START */
-
-    .email-intro{
-        width: 100%;
-    }
-
-    input[type="email"] {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 38px;
-    }
-
-    form .btn{
-        width: 100%;
-    }
-
-    /* EMAIL END */
-    /* FOOTER START */
-
-    .footer-wrapper,
-    .footer-list {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-logo{
-        margin-bottom: 39px;
-        margin-right: 0;
-    }
-
-    .footer-item{
-        margin-bottom: 32px;
-        margin-right: 0;
-    }
-
-    .icons-item{
-        margin-left: 0;
-    }
-
-    .icons-item:first-child{
-        margin-right: 40px;
-    }
-
 }
+
+/* MEIDA LARGE END */
 
 @media screen and (max-width: 768px) {
 
@@ -923,7 +777,7 @@ form .btn:hover{
 
     .features-img img{
         width: 100%;
-        object-fit: cover;
+
     }
 
     #features{
@@ -994,4 +848,49 @@ form .btn:hover{
         margin-right: 40px;
     }
 
+}
+
+@media screen and (max-width: 576px) {
+    .btns{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btns .btn:first-child{
+        width: 200px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+
+    .btns .btn:last-child{
+        width: 200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /*  QUESTIONS START */
+
+    .questions-intro{
+        width: 100%;
+        padding: 0 25px;
+        margin: 0 auto;
+    }
+
+    /* QUESTION END */
+    /* EMAIL START */
+
+    .email-intro{
+        width: 100%;
+    }
+
+    input[type="email"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 38px;
+    }
+
+    form .btn{
+        width: 100%;
+    }
 }
